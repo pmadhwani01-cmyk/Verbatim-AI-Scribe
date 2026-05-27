@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Verbatim AI Scribe — Privacy Policy</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px 24px; background: #0a0a0a; color: #ccc; line-height: 1.7; }
+  h1 { color: #fff; font-size: 28px; margin-bottom: 4px; }
+  h2 { color: #eee; font-size: 18px; border-bottom: 1px solid #222; padding-bottom: 8px; margin-top: 40px; }
+  p { color: #aaa; }
+  .meta { color: #666; font-size: 14px; margin-bottom: 32px; }
+  .callout { background: #111; border: 1px solid #222; border-radius: 12px; padding: 16px 20px; margin-bottom: 24px; }
+  .callout p { margin: 0; color: #bbb; }
+  table { width: 100%; border-collapse: collapse; margin-top: 16px; }
+  th { text-align: left; color: #666; font-size: 13px; padding: 10px 12px; background: #111; border: 1px solid #222; }
+  td { padding: 10px 12px; border: 1px solid #1a1a1a; color: #bbb; font-size: 14px; vertical-align: top; }
+  .tag { display: inline-block; background: #0a2e22; color: #5DCAA5; border-radius: 6px; padding: 3px 10px; font-size: 13px; margin: 3px; }
+  .pill-yes { background: #3b0a0a; color: #F09595; border-radius: 12px; padding: 2px 10px; font-size: 12px; }
+  .pill-no  { background: #0a2e1a; color: #5DCAA5; border-radius: 12px; padding: 2px 10px; font-size: 12px; }
+  .pill-cond { background: #2e1e0a; color: #EF9F27; border-radius: 12px; padding: 2px 10px; font-size: 12px; }
+  a { color: #5DCAA5; }
+  .partner { background: #0f0f0f; border: 1px solid #1e1e1e; border-radius: 10px; padding: 16px 20px; margin-bottom: 12px; }
+  .partner-name { color: #eee; font-weight: 600; margin: 0 0 6px 0; }
+</style>
+</head>
+<body>
+
+<h1>Privacy Policy</h1>
+<p class="meta">Verbatim AI Scribe &nbsp;·&nbsp; Effective date: May 3, 2026 &nbsp;·&nbsp; Version 1.0</p>
+
+<div class="callout">
+  <p><strong>The short version:</strong> Your recordings, transcripts, and meeting summaries never leave your device. Verbatim AI Scribe processes AI using your own API keys. The only data we or our partners collect relates to your subscription and app stability — never your meeting content.</p>
+</div>
+
+<h2>Overview</h2>
+<p>Verbatim AI Scribe is an AI-powered meeting recorder, transcriber, and summariser for iOS. All audio recordings, transcripts, and AI-generated summaries are stored exclusively on your device. We do not operate servers that store your meeting content.</p>
+
+<h2>Data Collection Summary</h2>
+<table>
+  <thead>
+    <tr><th>Data type</th><th>Collected?</th><th>Collected by</th><th>Purpose</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Audio recordings</td><td><span class="pill-no">No</span></td><td>Nobody</td><td>Stays on device only</td></tr>
+    <tr><td>Meeting transcripts</td><td><span class="pill-cond">Transient</span></td><td>Groq / AssemblyAI (your key)</td><td>Transcription processing — not retained</td></tr>
+    <tr><td>Meeting summaries</td><td><span class="pill-cond">Transient</span></td><td>Anthropic (your key)</td><td>AI summarisation — not retained</td></tr>
+    <tr><td>Purchase history</td><td><span class="pill-yes">Yes</span></td><td>RevenueCat</td><td>Subscription management</td></tr>
+    <tr><td>Anonymous user ID</td><td><span class="pill-yes">Yes</span></td><td>RevenueCat</td><td>Linking subscription to device</td></tr>
+    <tr><td>Device identifiers</td><td><span class="pill-yes">Yes</span></td><td>RevenueCat</td><td>Subscription analytics</td></tr>
+    <tr><td>Calendar metadata</td><td><span class="pill-no">No</span></td><td>Nobody</td><td>Read locally only — never transmitted</td></tr>
+    <tr><td>API keys</td><td><span class="pill-no">No</span></td><td>Nobody</td><td>iOS Keychain only — never sent to our servers</td></tr>
+    <tr><td>Crash / diagnostic logs</td><td><span class="pill-cond">Partial</span></td><td>Apple</td><td>App stability</td></tr>
+  </tbody>
+</table>
+
+<h2>Data Stored on Your Device</h2>
+<p>The following data never leaves your iPhone unless you explicitly export or share it:</p>
+<p>
+  <span class="tag">Audio files (.m4a)</span>
+  <span class="tag">Transcripts</span>
+  <span class="tag">AI summaries</span>
+  <span class="tag">Meeting metadata</span>
+  <span class="tag">Chat history</span>
+</p>
+<p>This data is stored in a local SQLite database in your app's private document directory, protected by iOS Data Protection. Your API keys are stored in the iOS Keychain via AES-256 encryption and never transmitted to our servers.</p>
+
+<h2>Third-Party Services</h2>
+
+<div class="partner">
+  <p class="partner-name">Groq (transcription)</p>
+  <p>When you transcribe a recording, audio is sent to Groq's API using your own Groq API key. Groq does not retain audio beyond processing. Verbatim AI Scribe does not receive or store this data.</p>
+</div>
+
+<div class="partner">
+  <p class="partner-name">Anthropic (AI summarisation)</p>
+  <p>When you generate a summary or use AI chat, transcript text is sent to Anthropic's API using your own API key. Verbatim AI Scribe does not receive or store this data.</p>
+</div>
+
+<div class="partner">
+  <p class="partner-name">AssemblyAI (speaker diarisation — optional)</p>
+  <p>If you enable speaker diarisation, audio is sent to AssemblyAI using your own API key. This feature is off by default and entirely optional.</p>
+</div>
+
+<div class="partner">
+  <p class="partner-name">RevenueCat (subscriptions)</p>
+  <p>Verbatim AI Scribe uses RevenueCat to manage in-app subscriptions. RevenueCat collects an anonymous user ID, device identifiers, and purchase history for entitlement verification.</p>
+</div>
+
+<h2>Permissions</h2>
+<table>
+  <thead><tr><th>Permission</th><th>Why it is needed</th></tr></thead>
+  <tbody>
+    <tr><td>Microphone</td><td>To record meetings. Audio is stored locally and never uploaded to our servers.</td></tr>
+    <tr><td>Calendars</td><td>To display upcoming meetings. Calendar data is read locally only and never transmitted.</td></tr>
+    <tr><td>Face ID / Touch ID</td><td>Optional app lock. Biometric data never leaves the Secure Enclave.</td></tr>
+    <tr><td>Notifications</td><td>Optional reminders for scheduled meetings.</td></tr>
+  </tbody>
+</table>
+
+<h2>Data Retention and Deletion</h2>
+<p>Because your meeting data lives on your device, you are in complete control. Delete individual recordings from the Library screen. Delete all data by uninstalling the app. Subscription data held by RevenueCat is subject to their retention policy.</p>
+
+<h2>Children's Privacy</h2>
+<p>Verbatim AI Scribe is not directed at children under 13 and does not knowingly collect personal information from children.</p>
+
+<h2>Contact</h2>
+<p>Questions about this privacy policy: <a href="mailto:pratik.j.madhwani@gmail.com">pratik.j.madhwani@gmail.com</a></p>
+
+</body>
+</html>
